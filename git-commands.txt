@@ -1,0 +1,269 @@
+C:\Users\rosha>git --version
+git version 2.37.3.windows.1
+
+C:\Users\rosha>cd OneDrive
+
+C:\Users\rosha\OneDrive>cd Desktop
+
+C:\Users\rosha\OneDrive\Desktop>cd Git
+
+C:\Users\rosha\OneDrive\Desktop\Git>git init
+Initialized empty Git repository in C:/Users/rosha/OneDrive/Desktop/Git/.git/
+
+C:\Users\rosha\OneDrive\Desktop\Git>dir
+ Volume in drive C is Acer
+ Volume Serial Number is 1C89-2F6F
+
+ Directory of C:\Users\rosha\OneDrive\Desktop\Git
+
+03-10-2022  11:23    <DIR>          .
+03-10-2022  11:18    <DIR>          ..
+03-10-2022  11:18           100,194 git-cheat-sheet-education.pdf
+03-10-2022  11:22                41 Readme.md
+               2 File(s)        100,235 bytes
+               2 Dir(s)  26,436,325,376 bytes free
+
+C:\Users\rosha\OneDrive\Desktop\Git>git config --global user.name
+roshanfande
+
+C:\Users\rosha\OneDrive\Desktop\Git>git config --global user.name "FandeRoshan"
+
+C:\Users\rosha\OneDrive\Desktop\Git>git config --global user.name
+FandeRoshan
+
+C:\Users\rosha\OneDrive\Desktop\Git>git config --global user.email "fanderoshan@gmail.com"
+
+C:\Users\rosha\OneDrive\Desktop\Git>git config --global user.email
+fanderoshan@gmail.com
+
+#------Git Status-----------#
+
+C:\Users\rosha\OneDrive\Desktop\Git>git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Readme.md
+        git-cheat-sheet-education.pdf
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+#------Addting Readme file to repo----------#
+#--------It will add into stagging environment-----#
+C:\Users\rosha\OneDrive\Desktop\Git>git add Readme.md
+
+C:\Users\rosha\OneDrive\Desktop\Git>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   Readme.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        git-cheat-sheet-education.pdf
+
+#----It will commit into stagging environment------#
+
+C:\Users\rosha\OneDrive\Desktop\Git>git commit -m "This is my first commit"t
+[master (root-commit) ecc06f8] This is my first committ
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Readme.md
+
+C:\Users\rosha\OneDrive\Desktop\Git>git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        git-cheat-sheet-education.pdf
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+#-------Check the branch by default it would be master branch---#
+
+C:\Users\rosha\OneDrive\Desktop\Git>git branch
+* master
+
+#-------Renamed master to main branch-------------------------#
+
+C:\Users\rosha\OneDrive\Desktop\Git>git branch -M main
+
+C:\Users\rosha\OneDrive\Desktop\Git>git branch
+* main
+
+#-------Set origin---------------------#
+C:\Users\rosha\OneDrive\Desktop\Git>git remote add origin https://github.com/FandeRoshan/gittutorial.git
+
+C:\Users\rosha\OneDrive\Desktop\Git>git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        git-cheat-sheet-education.pdf
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\rosha\OneDrive\Desktop\Git>git remote -v
+origin  https://github.com/FandeRoshan/gittutorial.git (fetch)
+origin  https://github.com/FandeRoshan/gittutorial.git (push)
+
+#----------Push the file into main origin -----------#
+
+C:\Users\rosha\OneDrive\Desktop\Git>git push origin main
+info: please complete authentication in your browser...
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 262 bytes | 262.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/FandeRoshan/gittutorial.git
+ * [new branch]      main -> main
+
+C:\Users\rosha\OneDrive\Desktop\Git>git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        git-cheat-sheet-education.pdf
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\rosha\OneDrive\Desktop\Git>git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Readme.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        git-cheat-sheet-education.pdf
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\rosha\OneDrive\Desktop\Git>git restore Readme.md
+
+C:\Users\rosha\OneDrive\Desktop\Git>git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        git-cheat-sheet-education.pdf
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\rosha\OneDrive\Desktop\Git>git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Readme.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        git-cheat-sheet-education.pdf
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\rosha\OneDrive\Desktop\Git>clear
+'clear' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\rosha\OneDrive\Desktop\Git>git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Readme.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        git-cheat-sheet-education.pdf
+        test1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\rosha\OneDrive\Desktop\Git>git add .
+
+C:\Users\rosha\OneDrive\Desktop\Git>git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   Readme.md
+        new file:   git-cheat-sheet-education.pdf
+        new file:   test1.txt
+
+
+C:\Users\rosha\OneDrive\Desktop\Git>git commit -m "This is my seconde commit"
+[main d072a6f] This is my seconde commit
+ 3 files changed, 1 insertion(+), 1 deletion(-)
+ create mode 100644 git-cheat-sheet-education.pdf
+ create mode 100644 test1.txt
+
+C:\Users\rosha\OneDrive\Desktop\Git>git origine
+git: 'origine' is not a git command. See 'git --help'.
+
+C:\Users\rosha\OneDrive\Desktop\Git>git origin
+git: 'origin' is not a git command. See 'git --help'.
+
+C:\Users\rosha\OneDrive\Desktop\Git>git remote -v
+origin  https://github.com/FandeRoshan/gittutorial.git (fetch)
+origin  https://github.com/FandeRoshan/gittutorial.git (push)
+
+C:\Users\rosha\OneDrive\Desktop\Git>git push origin main
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 91.15 KiB | 22.79 MiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/FandeRoshan/gittutorial.git
+   ecc06f8..d072a6f  main -> main
+
+C:\Users\rosha\OneDrive\Desktop\Git>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
